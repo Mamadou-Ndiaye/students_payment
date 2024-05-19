@@ -8,11 +8,13 @@ import {StudentsComponent} from "./students/students.component";
 import {PaymentsComponent} from "./payments/payments.component";
 import {LoadStudentsComponent} from "./load-students/load-students.component";
 import {LoadPaymentsComponent} from "./load-payments/load-payments.component";
+import {AuthGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {path : "admin", component : AdminTemplateComponent,
+    canActivate: [AuthGuard],
     children : [
       {path : "home", component : HomeComponent},
       {path : "profile", component : ProfileComponent},
