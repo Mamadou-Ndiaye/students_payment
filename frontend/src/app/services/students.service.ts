@@ -21,4 +21,8 @@ export class StudentsService {
   getAllPayments() {
     return  this.http.get<Array<Payments>>(`${environment.apiUrl}payments`);
   }
+
+  getStudentPayments(code : string) {
+    return  this.http.get<Array<Payments>>(`${environment.apiUrl}students/${code}/payments`);
+  }
 }

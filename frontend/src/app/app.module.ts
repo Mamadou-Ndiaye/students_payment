@@ -27,6 +27,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
 import {AuthGuard} from "./guards/auth.guard";
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {AuthGuard} from "./guards/auth.guard";
     LoadStudentsComponent,
     LoadPaymentsComponent,
     PaymentsComponent,
-    StudentsComponent
+    StudentsComponent,
+    StudentDetailsComponent
   ],
     imports: [
         BrowserModule,

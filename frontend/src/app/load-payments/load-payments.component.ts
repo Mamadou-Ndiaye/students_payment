@@ -18,7 +18,7 @@ export class LoadPaymentsComponent implements OnInit{
   displayedColumns: string[] = ['ID', 'Date', 'Amount', 'Status', 'Type', 'Student'];
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
-  @ViewChild(MatSort, { static: true }) sort!: MatSort;
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngOnInit(): void {
     this.getAllPayments();
