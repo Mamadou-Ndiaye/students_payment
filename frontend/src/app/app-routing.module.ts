@@ -9,6 +9,7 @@ import {PaymentsComponent} from "./payments/payments.component";
 import {LoadStudentsComponent} from "./load-students/load-students.component";
 import {LoadPaymentsComponent} from "./load-payments/load-payments.component";
 import {AuthGuard} from "./guards/auth.guard";
+import {AuthorizationGuard} from "./guards/authorization.guard";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,11 +23,11 @@ const routes: Routes = [
       {path : "payments", component : PaymentsComponent},
       {
         path : "loadStudents", component : LoadStudentsComponent,
-        //canActivate : [AuthorizationGuard], data : {roles : ['ADMIN']}
+        canActivate : [AuthorizationGuard], data : {roles : ['ADMIN']}
       },
       {
         path : "loadPayments", component : LoadPaymentsComponent,
-       // canActivate : [AuthorizationGuard], data : {roles : ['ADMIN']}
+        canActivate : [AuthorizationGuard], data : {roles : ['ADMIN']}
       },
     ]},
 ];
