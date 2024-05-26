@@ -11,6 +11,8 @@ import {LoadPaymentsComponent} from "./load-payments/load-payments.component";
 import {AuthGuard} from "./guards/auth.guard";
 import {AuthorizationGuard} from "./guards/authorization.guard";
 import {StudentDetailsComponent} from "./student-details/student-details.component";
+import {NewPaymentComponent} from "./new-payment/new-payment.component";
+import {PaymentDetailsComponent} from "./payment-details/payment-details.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -23,6 +25,8 @@ const routes: Routes = [
       {path : "students", component : StudentsComponent},
       {path : "payments", component : PaymentsComponent},
       {path : "student-details/:code", component : StudentDetailsComponent},
+      {path : "new-payment/:code", component : NewPaymentComponent},
+      {path : "payment-details/:id", component : PaymentDetailsComponent},
       {
         path : "loadStudents", component : LoadStudentsComponent,
         canActivate : [AuthorizationGuard], data : {roles : ['ADMIN']}

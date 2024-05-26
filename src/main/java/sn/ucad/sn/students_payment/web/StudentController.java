@@ -7,7 +7,6 @@ import sn.ucad.sn.students_payment.dtos.NewPaymentDTO;
 import sn.ucad.sn.students_payment.entities.Payment;
 import sn.ucad.sn.students_payment.entities.Student;
 import sn.ucad.sn.students_payment.entities.enums.PaymentStatus;
-import sn.ucad.sn.students_payment.entities.enums.PaymentType;
 import sn.ucad.sn.students_payment.repository.PaymentRepository;
 import sn.ucad.sn.students_payment.repository.StudentRepository;
 import sn.ucad.sn.students_payment.service.PaymentService;

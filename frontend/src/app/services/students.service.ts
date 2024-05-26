@@ -25,4 +25,12 @@ export class StudentsService {
   getStudentPayments(code : string) {
     return  this.http.get<Array<Payments>>(`${environment.apiUrl}students/${code}/payments`);
   }
+
+  savePayment(formData: FormData): Observable<Payments> {
+    return  this.http.post<Payments>(`${environment.apiUrl}payments`, formData);
+  }
+
+  paymentDetails(idPayment: any) {
+    return  this.http.get<Array<Payments>>(`${environment.apiUrl}payments/${idPayment}/file`, {responseType: 'blob'});
+  }
 }

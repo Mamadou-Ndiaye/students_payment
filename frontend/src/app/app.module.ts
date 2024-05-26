@@ -28,6 +28,11 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
 import {AuthGuard} from "./guards/auth.guard";
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { NewPaymentComponent } from './new-payment/new-payment.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
+import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 
 @NgModule({
   declarations: [
@@ -40,29 +45,34 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     LoadPaymentsComponent,
     PaymentsComponent,
     StudentsComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    NewPaymentComponent,
+    PaymentDetailsComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
 
-        MatCardModule,
-        MatDividerModule,
-        MatInputModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatMenuModule,
-        MatSidenavModule,
-        MatListModule,
-        MatIconModule,
-        MatTableModule,
-        MatPaginatorModule,
-        MatSortModule
-    ],
+    MatCardModule,
+    MatDividerModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+  ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
